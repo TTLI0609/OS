@@ -1,0 +1,28 @@
+1.1)
+real	0m5,003s
+user	0m0,004s
+sys	0m0,000s
+
+
+4.2) 
+Statistiques de sleep 5: 
+Temps total : 5.010000 
+Temps utilisateur : 0.000000 
+Temps systeme  : 0.000000 
+Temps utilisateur fils: 0.000000 
+Temps systeme fils : 0.000000
+
+C'est la même chose.
+
+5.1) 
+La priorité de ps est 80.
+5.2) 
+Après la commande /bin/nice -19 ps -l, La priorité de ps est 99.
+
+5.4)
+./mytimes "./exo5" & ./mytimes "nice -19 ./exo5"
+
+temps en us: 165011  // pour ./mytimes "./exo5"
+temps en us: 166456  // pour ./mytimes "nice -19 ./exo5"
+
+donc le temps utilisé pour "nice -19 ./exo5" est supérieur à celui de "./exo5".
